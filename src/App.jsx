@@ -8,7 +8,6 @@ const App = () => {
 
   const handleAdd = () => {
     if (editIndex !== null) {
-      // Edit existing item
       const updatedData = data.map((item, index) =>
         index === editIndex ? editValue : item
       );
@@ -16,7 +15,6 @@ const App = () => {
       setEditIndex(null);
       setEditValue("");
     } else {
-      // Add new item
       setData([...data, desc]);
       setDesc("");
     }
